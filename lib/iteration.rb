@@ -24,7 +24,24 @@ while row_index < join_ingredients.count do
 end
 
 outer_results #=>[["I love salt and pepper on my pizza"]]
-    
+ 
+ 
+ join_ingredients = ["
+
+  outer_results = []
+row_index = 0
+while row_index < join_ingredients.count do
+  element_index = 0
+  inner_results = []
+  while element_index < join_ingredients[row_index].count do
+    if join_ingredients[row_index][element_index][0] == "P"
+      inner_results << join_ingredients[row_index][element_index]
+    end
+    element_index += 1
+  end
+  outer_results << inner_results
+  row_index += 1
+end   
 
 
   # Build a new Array that contains strings where each pair of foods is
